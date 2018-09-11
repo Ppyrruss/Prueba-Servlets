@@ -19,7 +19,6 @@ public class PrimerServlet extends HttpServlet {
      */
     public PrimerServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
