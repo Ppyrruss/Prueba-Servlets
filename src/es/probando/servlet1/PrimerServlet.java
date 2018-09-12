@@ -1,6 +1,8 @@
 package es.probando.servlet1;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +29,13 @@ public class PrimerServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//Especificar formato de respuesta
+		PrintWriter salida = response.getWriter();
 		
+		//Generar respuesta de la peticion
+		salida.println("<html><body>");
+		salida.println("<p>Prueba Servlet</p>");
+		salida.println("</body></html>");
 	}
 
 	/**
